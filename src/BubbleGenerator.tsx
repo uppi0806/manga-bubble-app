@@ -11,7 +11,7 @@ const SCALE_FACTOR = 4;
 const CHAR_HEIGHT = 28 * SCALE_FACTOR;
 const LINE_SPACING = 34 * SCALE_FACTOR;
 const STROKE_WIDTH = 4 * SCALE_FACTOR;
-const HORIZONTAL_MARGIN = 8 * SCALE_FACTOR;
+const HORIZONTAL_MARGIN = 19 * SCALE_FACTOR;  // 8から12に増加
 const VERTICAL_MARGIN = 15 * SCALE_FACTOR;
 const SAFETY_MARGIN = 1.3;
 
@@ -114,7 +114,7 @@ const BubbleGenerator: React.FC<BubbleGeneratorProps> = ({ text, index, onGenera
           const adjustY = CHAR_HEIGHT * 0.5 / SCALE_FACTOR;
           const prevCharY = charY - CHAR_HEIGHT / SCALE_FACTOR;
           ctx.fillText(char, lineX + adjustX, prevCharY + adjustY);
-          charY += CHAR_HEIGHT * 0.7 / SCALE_FACTOR;  // 0.5から0.7に変更して間隔を広げる
+          charY += CHAR_HEIGHT * 0.7 / SCALE_FACTOR;
         } else {
           ctx.fillText(char, lineX, charY);
           charY += CHAR_HEIGHT / SCALE_FACTOR;
