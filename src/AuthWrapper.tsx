@@ -12,7 +12,7 @@ const AuthWrapper: React.FC<AuthWrapperProps> = ({ children }) => {
       const username = prompt('Username:');
       const password = prompt('Password:');
 
-      if (username === 'your-username' && password === 'your-password') {
+      if (username === 'manga-fukidashi' && password === 'rt08062425') {
         setIsAuthenticated(true);
         sessionStorage.setItem('isAuthenticated', 'true');
       } else {
