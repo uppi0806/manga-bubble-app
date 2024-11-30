@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import JSZip from 'jszip';
 import BubbleGenerator from './BubbleGenerator';
+import AuthWrapper from './AuthWrapper';
 
 const App: React.FC = () => {
   const [mainText, setText] = useState<string>('');
@@ -42,6 +43,7 @@ const App: React.FC = () => {
     .filter(block => block !== '');
 
   return (
+    <AuthWrapper>
     <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
       <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>漫画の吹き出し生成ツール</h1>
       
@@ -88,6 +90,7 @@ const App: React.FC = () => {
         />
       ))}
     </div>
+    </AuthWrapper>
   );
 };
 
